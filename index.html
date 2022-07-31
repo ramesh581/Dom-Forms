@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" class="m-5 p-5">
+        <input type="text" id="firstName" placeholder="Enter Name" required><br><br>
+        <input type="text" id="lastName" placeholder="Enter Lastname" required><br><br>
+        <p>Address : </p>
+        <input type="text" id="address" placeholder="Enter Address" required><br><br>
+        <input type="text" id="state" placeholder="Enter state" required><br><br>
+        <input type="text" id="country" placeholder="Enter country" required><br><br>
+        <input type="text" id="pin" placeholder="Enter PIN" required><br><br>
+
+        <p>Gender : </p>
+        <input type="radio" id="Male" name="Gender" value="Male">
+        <label for="html">Male</label><br>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label for="Female">Female</label>
+
+        <p>Select Food : </p>
+        <input type="checkbox" id="idli" name="food" value="Idli">
+        <label for="Idli">Idli</label><br>
+        <input type="checkbox" id="Dosa" name="food" value="Dosa">
+        <label for="Dosa">Dosa</label><br>
+        <input type="checkbox" id="Vada" name="food" value="Vada">
+        <label for="Vada">Vada</label><br><br>
+
+        <input type="submit" class="btn btn-primary" id="submit" value="Submit">
+  
+
+    </form>
+
+    <table class="table table-striped table-bordered table-hover"cellspacing="0" cellpadding="0" width="100%" height="100%">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Pin Code</th>
+            <th>Gender</th>
+            <th>Food</th>
+            <th>State</th>
+            <th>Country</th>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
