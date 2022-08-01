@@ -1,35 +1,43 @@
-let firstName = document.getElementById('firstName');
-let lastName = document.getElementById('lastName');
-let address = document.getElementById('address');
-let state = document.getElementById('state');
-let country = document.getElementById('country');
-let pin = document.getElementById('pin');
-let gender = document.querySelector('gender');
-let food = document.getElementsByName('food');
+let firstName = document.getElementById('fname').value;
+let lastName = document.getElementById('lname').value;
+let address = document.getElementById('address').value;
+let state = document.getElementById('state').value;
+let country = document.getElementById('country').value;
+let pin = document.getElementById('pin').value;
 
-let submit = document.getElementById('submit');
+let gender = document.querySelector('input[name="Gender"]:checked').value;
 
-let tableBody = document.querySelector('#table-body');
+let foods = document.getElementsByName('food[]');
+
+let food = [];
+for(let i=0; i<foods.length; i++) {
+    if(foods[i].checked){
+        food.push(foods[i]);
+    }
+};
+
+console.log(firstName,lastName,address,state,country,pin,gender,food);
 
 
 
-submit.addEventListener('click', () => {
-    let tableRow = "";
-    tableRow += `
+
+
+
+
+
+ function collectData() {
+    let tableBody = document.querySelector('#table-body');
+    let tableRow  = `
     <tr>
     <td>${firstName}</td>
     <td>${lastName}</td>
     <td>${address}</td>
     <td>${pin}</td>
     <td>${gender}</td>
-    <td>${food[0]}</td>
+    <td>${food[0],food[1]}</td>
     <td>${state}</td>
     <td>${country}</td>
     </tr>`;
-    tableBody.appendChild(tableRow);
-    console.log(firstName,lastName,address,state,country,pin,gender,food);
+    tableBody.innerHTML = tableRow;
+}
 
-  
-});
-
-console.log(firstName,lastName,address,state,country,pin,gender,food);
