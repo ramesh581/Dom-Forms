@@ -1,11 +1,14 @@
  form{
-    width: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
     border: 2px solid #000;
     background-color: rgb(207, 245, 247);
     border-radius: 15px;
  }
  
  form input{
+   width:max-content;
     margin: 5px;
     padding: 5px;
 }

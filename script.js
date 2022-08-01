@@ -46,18 +46,20 @@ ${data.food[1].value},${data.food[0].value}
 
  function collectData() {
     let tableBody = document.querySelector('#table-body');
-    let tableRow  = "" 
-    tableBody +=`
+    let tableRow  = "" ;
+    tableRow +=`
     <tr>
     <td>${data.firstName}</td>
     <td>${data.lastName}</td>
     <td>${data.address}</td>
     <td>${data.pin}</td>
     <td>${data.gender}</td>
-    <td>${data.food[0]}${data.food[1]}</td>
+    <td>${data.food[0].value}
+    ${data.food[1].value}</td>
     <td>${data.state}</td>
     <td>${data.country}</td>
     </tr>`;
+    console.log(tableRow);
     tableBody.innerHTML = tableRow;
 }
 
