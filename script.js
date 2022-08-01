@@ -47,7 +47,6 @@ form.addEventListener('submit', function (event) {
     <td>${data.state}</td>
     <td>${data.country}</td>
     </tr>`;
-    console.log(tableRow);
     tableBody.innerHTML = tableRow;
 });
 
