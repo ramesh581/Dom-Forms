@@ -26,25 +26,14 @@ for(let i=0; i<foods.length; i++) {
 data.food = food;
 
 
-console.log(`
-${data.firstName},
-${data.lastName},
-${data.gender},
-${data.address},
-${data.state},
-${data.country},
-${data.pin},
-${data.food[1].value},${data.food[0].value}
-`);
 
 
 
+let form = document.getElementById('form');
 
 
-
-
-
- function collectData() {
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
     let tableBody = document.querySelector('#table-body');
     let tableRow  = "" ;
     tableRow +=`
@@ -54,12 +43,11 @@ ${data.food[1].value},${data.food[0].value}
     <td>${data.address}</td>
     <td>${data.pin}</td>
     <td>${data.gender}</td>
-    <td>${data.food[0].value}
-    ${data.food[1].value}</td>
+    <td>${data.food.map((x)=>x.value)}</td>
     <td>${data.state}</td>
     <td>${data.country}</td>
     </tr>`;
     console.log(tableRow);
     tableBody.innerHTML = tableRow;
-}
+});
 
