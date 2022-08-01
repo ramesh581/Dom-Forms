@@ -14,20 +14,20 @@
     <title>Document</title>
 </head>
 <body>
-    <form action=""class=" m-5 p-5" id="form">
+    <form action="" method = "Post" class="form-horizontal form m-5 p-5" id="form">
         <label for="fname">First Name : 
-        <input type="text" id="fname" value = "John" required></label>
+        <input type="text" id="fname" placeholder="First Name" required></label>
         <label for="lname">Last Name : 
-        <input type="text" id="lname" value="Smith"  required><br></label>
+        <input type="text" id="lname" placeholder="Last Name" required></label><br>
 
         <label for="address">Address :
-        <input type="text" id="address" value="3-33" required>  </label>
+        <input type="text" id="address" placeholder="Enter Address" required></label><br> 
         <label for="state">State : 
-        <input type="text" id="state" value ="New york"required>  </label><br>
+        <input type="text" id="state" placeholder="Enter the State" required></label><br> 
         <label for="country">Country : 
-        <input type="text" id="country" value="USA" required> </label>
+        <input type="text" id="country" placeholder="Enter the Country" required></label><br>
         <label for="pin"> PinCode : 
-        <input type="text" id="pin" value="500001" required> </label> <br><br>
+        <input type="text" id="pin" placeholder="Enter the Pin" required> </label> <br><br>
 
         <label for="">Gender : 
         <input type="radio" id="Male" name="Gender" value=" Male" checked>Male
@@ -38,11 +38,11 @@
 
         <label>Food Menu : 
         <input type="checkbox" id="burger" name="food[]" value="burger" checked>Burger 
-        <input type="checkbox" id="pizza" name="food[]" value="pizza" checked>Pizza 
+        <input type="checkbox" id="pizza" name="food[]" value="pizza" >Pizza 
         <input type="checkbox" id="milkShake" name="food[]" value="milkShake" checked>Milk Shake
     </label> <br> <br>
 
-        <input type="submit" id="submit" class="btn btn-primary" value="Submit"> 
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
 
     </form> 
 
