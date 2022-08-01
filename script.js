@@ -26,7 +26,16 @@ for(let i=0; i<foods.length; i++) {
 data.food = food;
 
 
-console.log(data);
+console.log(`
+${data.firstName},
+${data.lastName},
+${data.gender},
+${data.address},
+${data.state},
+${data.country},
+${data.pin},
+${data.food[1].value},${data.food[0].value}
+`);
 
 
 
@@ -37,16 +46,17 @@ console.log(data);
 
  function collectData() {
     let tableBody = document.querySelector('#table-body');
-    let tableRow  = `
+    let tableRow  = "" 
+    tableBody +=`
     <tr>
-    <td>${firstName}</td>
-    <td>${lastName}</td>
-    <td>${address}</td>
-    <td>${pin}</td>
-    <td>${gender}</td>
-    <td>${food[0],food[1]}</td>
-    <td>${state}</td>
-    <td>${country}</td>
+    <td>${data.firstName}</td>
+    <td>${data.lastName}</td>
+    <td>${data.address}</td>
+    <td>${data.pin}</td>
+    <td>${data.gender}</td>
+    <td>${data.food[0]}${data.food[1]}</td>
+    <td>${data.state}</td>
+    <td>${data.country}</td>
     </tr>`;
     tableBody.innerHTML = tableRow;
 }
